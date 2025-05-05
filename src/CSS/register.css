@@ -1,0 +1,176 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-image: url('/src/Icons/background2.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-color: #f4f4f4; /* Fallback color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+/* Header */
+.WeatherMap-header{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 8ch;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(5, 49, 11);
+    border: 1px solid rgba(4, 34, 231, 0);
+    border-radius: 9ch;
+    width: 700px;
+    height: 140px;
+    margin-top: -60px; 
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
+    background-color: rgba(255, 255, 255, 0.3); /* Optional: Add a semi-transparent background color */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Optional: Add a semi-transparent border */
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: darkgreen;
+    
+}
+
+/* Form Section */
+section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+    text-align: center;
+    margin: 20px auto; 
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Row */
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Labels */
+form label {
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Input Fields */
+form input {
+    flex: 2; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 18px;
+     
+}
+
+/* Buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Header bar */
+.topbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: #4e4e4e;
+    color: white;
+    text-align: left;
+    padding-top: 20px;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.topbar-header{
+    color: white;
+    font-size: large;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.topbar-button{
+    width: 40px;
+    height: 40px;
+    background-color: #9e9d9d;
+    color: white;
+
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Header Nav Links */
+a{
+    margin-left: 20px;
+
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.2em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+

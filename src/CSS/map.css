@@ -1,0 +1,7 @@
+#mapButton {
+    zoom: 1.1; /* Adjust the zoom level as needed */
+    background-color: rgb(18, 151, 228);
+    transition: transform 0.3s ease;
+    }
+
+

@@ -1,0 +1,153 @@
+body {
+    background-color: #0000002c;
+}
+
+#profileButton {
+    background-color: rgb(18, 151, 228);
+}
+
+body.dark-mode .profile-container {
+    background-color: #000622; /* Dark background */
+    color: #000622; /* Light text */
+}
+
+body.dark-mode .profile-header {
+     /* Dark background */
+    color: #000622; /* Light text */
+}
+
+body.dark-mode .profile-container h2 {
+    color: rgba(0, 47, 255, 0.473);
+}
+
+
+.profile-container {
+    position: fixed;
+    left: 10%; /* Match sidebar width */
+    top: 10%;
+    width: 90%; /* Remaining space */
+    height: 90vh; 
+    overflow-y: auto;
+    padding: 35px;
+}
+
+
+.profile-header {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 0%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 5px solid #1296e4;
+}
+
+#profilePicture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #1296e4;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.stats {
+    margin-bottom: 15px;
+}
+
+.stats span {
+    margin-right: 15px;
+    color: #555;
+}
+
+.stats b {
+    color: #1296e4;
+}
+
+#profileBio {
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Posts styles */
+.profile-container h2 {
+    margin: 25px 0 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #1296e4;
+    width: fit-content;
+}
+
+.posts-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));/* Three columns */
+    
+    gap: 12px;
+    margin-top: 12px;
+    padding: 0 20px;
+}
+
+.post {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; /* Increased space between posts */
+    padding: 10px;
+}
+
+body.dark-mode .post, body.dark-mode .post p {
+    background-color: #000622; /* Dark background */
+    color: #cccccc; /* Light text */
+}
+.post img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+
+.post p {
+    padding: 12px;
+    color: #333;
+}
+
+.post-actions {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.profile-action-button {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(18, 151, 228);
+    padding: 8px 16px;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-action-button:hover {
+    background-color: #86d7ff;
+}
+
+.profile-action-button:focus {
+    outline: none;
+}

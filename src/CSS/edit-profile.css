@@ -1,0 +1,79 @@
+#username {
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#username:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.save-changes-button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+}
+
+.save-changes-button {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(18, 151, 228);
+    padding: 8px 16px;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-changes-button:hover {
+    background-color: #86d7ff;
+}
+
+.save-changes-button:focus {
+    outline: none;
+}
+
+.bio-editor{
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.update-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-row label {
+    min-width: 80px;
+    font-weight: bold;
+}

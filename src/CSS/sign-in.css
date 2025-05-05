@@ -1,0 +1,160 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-image: url('/src/Icons/newBack.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    margin: center;
+}
+
+/* Header */
+#title{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 8ch;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(4, 34, 231, 0.769);
+    background-color: rgba(0,0,0,0);
+    margin-top: -60px; 
+    
+}
+
+header {
+    text-align: center;
+}
+
+/* Form Section */
+section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+    text-align: center;
+    margin: 20px auto; 
+    transform: translateY(5%);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 5px;
+}
+
+/* Form Row */
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Labels */
+form label {
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Input Fields */
+form input {
+    flex: 2; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 18px;
+     
+}
+
+/* Buttons */
+button {
+    background-color: rgba(4, 34, 231, 0.769);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Header bar */
+.topbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: #4e4e4e;
+    color: white;
+    text-align: left;
+    padding-top: 20px;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.topbar-header{
+    color: white;
+    font-size: large;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.topbar-button{
+    width: 40px;
+    height: 40px;
+    background-color: #9e9d9d;
+    color: white;
+
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Header Nav Links */
+a{
+    margin-left: 20px;
+
+}
+
+.error{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  }
+

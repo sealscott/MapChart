@@ -1,0 +1,39 @@
+.messages-container {
+    position: fixed;
+    top: 10vh; /* Start below header */
+    left: 10%; /* Match sidebar width */
+    width: 90%; /* Remaining space */
+    height: 85vh; /* Reduced height to account for header */
+    /* Important: This makes the container a positioning context for absolute elements */
+    position: relative;
+    padding: 25px;
+}
+
+.message-sent {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightblue;
+    position: right;
+    align-items: right;
+}
+
+.message-recieved {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: grey;
+    position: left;
+}
+
+.send-message-container {
+    position: fixed;
+    top: 10vh; /* Start below header */
+    left: 10%; /* Match sidebar width */
+    width: 90%; /* Remaining space */
+    height: 5vh; /* Reduced height to account for header */
+    /* Important: This makes the container a positioning context for absolute elements */
+    position: relative;
+    padding: 25px;
+    align-items: center;
+}

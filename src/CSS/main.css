@@ -1,0 +1,354 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Main layout structure */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling - now spans full width at the top */
+#map-header {
+    height: 10vh; /* Fixed height for header */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.769);
+    color: rgb(0, 47, 255);
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 15px solid rgb(0, 47, 255);
+    z-index: 1000; /* Higher z-index to be above everything */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#app-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: rgba(4, 34, 231, 0.769);
+    margin-right: 20px;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+#searchBox {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#searchButton {
+    padding: 8px 15px;
+    width: 10%; 
+     
+    background-color: rgba(4, 34, 231, 0.769);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+#searchButton:hover {
+    background-color: #3367D6;
+}
+
+/* Left sidebar with nav buttons - now starts below header */
+#sidebar {
+    position: fixed;
+    top: 10vh; /* Start below header */
+    left: 0;
+    width: 10%;
+    height: 90vh; /* Reduced height to account for header */
+    background-color: rgba(4, 34, 231, 0.769);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    z-index: 900;
+    border-bottom: 15px solid rgb(0, 47, 255);
+    border-right: 15px solid rgb(0, 47, 255);
+    border-left: 15px solid rgb(0, 47, 255);
+}
+
+#feedButton, #mapButton, #profileButton, #profileSearchButton, #postButton, #settingsButton, #signOutButton, #darkModeButton, #friendsButton {
+    background-color: transparent;
+    background-size: 70%; /* Reduce from contain to a percentage */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75px; 
+    width: 75px;
+    border-radius: 50%; /* Ensure perfect circle */
+    
+}
+
+
+.nav-button:focus {
+    outline: none;
+}
+
+#feedButton {
+    background-image: url('/src/Icons/feed.png');
+}
+
+#mapButton {
+    background-image: url('/src/Icons/map.png');
+}
+
+#profileButton {
+    background-image: url('/src/Icons/profile.png');
+
+}
+
+#profileSearchButton {
+    background-image: url('/src/Icons/search.png');
+}
+
+#postButton {
+    background-image: url('/src/Icons/post.png');
+}
+
+#settingsButton {
+    background-image: url('/src/Icons/settings.png');
+}
+
+#signOutButton {
+    background-image: url('/src/Icons/signout.png');
+}
+
+#darkModeButton {
+    background-image: url('/src/Icons/darkmode.png');
+}
+
+#friendsButton {
+    background-image: url('/src/Icons/friends.png');
+}
+.nav-button {
+    width: 80%;
+    margin: 10px 0; /* Space between buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Use 50% for perfect circle */
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Add shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Enhance shadow on hover */
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+
+
+#signOutButton {
+    background-color: rgb(160, 43, 43);
+}
+
+/* Map container - now positioned below header and to the right of sidebar */
+#map-container {
+    position: fixed;
+    top: 10vh; /* Start below header */
+    left: 10%; /* Match sidebar width */
+    width: 90%; /* Remaining space */
+    height: 90vh; /* Reduced height to account for header */
+    /* Important: This makes the container a positioning context for absolute elements */
+    position: relative;
+}
+
+/* Map styling */
+#map {
+    height: 100%; /* Full height of container */
+    width: 100%;
+}
+
+
+
+#darkModeButton::after {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 10px;
+    color: red;
+    background: white;
+}
+
+
+
+/* Default (light mode) state of the dark mode button */
+#darkModeButton {
+    background-image: url('/src/Icons/darkmode.png'); /* Your dark mode icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* When in dark mode, show the light mode icon */
+body.dark-mode #darkModeButton {
+    background-image: url('/src/Icons/lightmode.png'); /* Your light mode icon */
+}
+
+/* Dark mode styles */
+body.dark-mode #sidebar {
+    background-color: #000622; /* Dark sidebar */
+}
+
+body.dark-mode #map-header {
+    background-color: #000622; /* Dark header */
+    color: #ffffff; /* Light text */
+}
+
+body.dark-mode .nav-button {
+    background-color: #333333; /* Dark button background */
+    color: #ffffff; /* Light button text */
+}
+
+body.dark-mode .nav-button:hover {
+    background-color: #444444; /* Slightly lighter on hover */
+}
+
+body.dark-mode #map {
+    filter: invert(100%) brightness(95%) contrast(90%); /* Invert map colors */
+}
+
+
+/* Weather widget styling - now positioned relative to map-container */
+#weather-widget {
+    position: absolute; /* Position relative to map-container */
+    top: 10%; /* Distance from top of map-container */
+    left: 70%; /* Distance from left of map-container */
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 950; /* Above map but below other UI elements */
+    overflow: hidden;
+    transition: height 0.3s ease;
+    height: 60px; /* Set initial height to only show header */
+    font-family: 'Franklin Gothic Medium';
+
+}
+
+#weather-widget.expanded {
+    height: auto; /* Expand to show full content */
+}
+
+#weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color:rgb(0, 47, 255);
+    color: white;
+}
+
+#weather-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#weather-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather-content {
+    padding: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#weather-content.expanded {
+    max-height: 300px;
+}
+
+#weather-location {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#weather-icon {
+    width: 75px;
+    height: 75px;
+    margin: 5px 0;
+}
+
+#weather-temp {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#weather-description {
+    margin: 5px 0;
+    font-size: 1.3rem;
+}
+
+#weather-details {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.weather-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 20%;
+    }
+    
+    #map-container {
+        left: 20%;
+        width: 80%;
+    }
+    
+    #app-title {
+        font-size: 1.2rem;
+    }
+    
+    #weather-widget {
+        width: 30%;
+    }
+}

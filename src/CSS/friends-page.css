@@ -1,0 +1,43 @@
+.friends-container {
+    position: fixed;
+    top: 10vh; /* Start below header */
+    left: 10%; /* Match sidebar width */
+    width: 90%; /* Remaining space */
+    height: 90vh; /* Reduced height to account for header */
+    /* Important: This makes the container a positioning context for absolute elements */
+    position: relative;
+    padding: 25px;
+    justify-content: center;
+}
+
+.friend-container{
+    
+}
+
+#friendsButton {
+    zoom: 1.2; /* Adjust the zoom level as needed */
+    background-color: rgb(18, 151, 228);
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .friends-container {
+    background-color: #000622; /* Dark background */
+    color: #acacac; /* Light text */
+}
+
+.friends-header{
+    font-size: 40px;
+}
+
+.friend-name{
+
+}
+
+.view-prof{
+
+}
+
+.view-mess{
+
+}
+

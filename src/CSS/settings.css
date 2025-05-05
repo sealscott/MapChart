@@ -1,0 +1,35 @@
+#settingsButton {
+    background-color: rgb(18, 151, 228);
+}
+
+.settings-container {
+    position: fixed;
+    top: 10vh; /* Start below header */
+    left: 0%; /* Match sidebar width */
+    width: 100%; /* Remaining space */
+    height: 90vh; /* Reduced height to account for header */
+    /* Important: This makes the container a positioning context for absolute elements */
+    align-items: center;
+    display: flex;
+    flex-direction: column; /* Center items vertically */
+    padding: 35px; /* Added padding for a more spacious feel */ /* Allow scrolling if content overflows */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0 auto; /* Center the container horizontally */
+    position: relative;
+}
+
+body.dark-mode .settings-container {
+    background-color: #000622; /* Dark background */
+    color: #000622; /* Light text */
+}
+
+.settings-header {
+    font-size: 36px;
+    color: rgba(4, 34, 231, 0.769);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+

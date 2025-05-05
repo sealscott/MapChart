@@ -1,0 +1,9 @@
+#ignore config
+*.pem
+.env
+.vscode/
+config/
+PHP-Backend/Post-Images/
+sonar-project.properties
+.scannerwork/
+
