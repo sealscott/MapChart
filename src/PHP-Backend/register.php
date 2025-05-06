@@ -9,7 +9,7 @@ require(__DIR__ . "/config/config.php");
 // Initialize error array
 $errors = [];
 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Validate email
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = "Invalid email format!";

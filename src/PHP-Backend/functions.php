@@ -207,7 +207,7 @@
     }
 
     function getDatabaseConnection() {
-        $config = require(__DIR__ . '\config\config.php'); // Load the configuration file
+        $config = require('../PHP-Backend/config/config.php'); // Load the configuration file
     
         // if (!isset($config['DB_HOST'], $config['DB_USER'], $config['DB_PASS'], $config['DB_NAME'])) {
         //     throw new Exception("Database configuration is incomplete.");

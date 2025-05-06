@@ -17,7 +17,7 @@ if (isset($_COOKIE['darkMode']) && $_COOKIE['darkMode'] === 'enabled') {
 
     <link id="mainStylesheet" rel="stylesheet" href="/src/CSS/main.css">
     <link id="mapStylesheet"rel="stylesheet" href="/src/CSS/map.css">
-    <link rel="icon" type="image/x-icon" href="/src/Icons/icon.png">
+    <link rel="icon" type="image/x-icon" href="../Icons/icon.png">
     
     <!-- Leaflet CSS Import -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"

@@ -55,7 +55,7 @@
     <title>Sign-in</title>
     <link rel="stylesheet" href="/src/CSS/sign-in.css">
     <!-- <link rel="stylesheet" href="/CSS/main.css"> DOESNT NEED TO GO TO MAIN ( BODYS COLLIDE )-->
-    <link rel="icon" type="image/x-icon" href="/src/Icons/icon.png">
+    <link rel="icon" type="image/x-icon" href="../Icons/icon.png">
 </head>
 
 <body>
