@@ -12,7 +12,6 @@
     //check lat & lon for valid values
     if(isset($_POST["lat"])){
         $lat = $_POST['lat'];
-        echo($lat);
     } else {
         echo "Error: " . $e->getMessage();
         exit();
@@ -25,10 +24,8 @@
         exit();
     }
 
-    echo($lon);
-
     // Load contentFilter
-    $filterFile = "\src\contentFilter\contentFilter.txt";
+    $filterFile = "\contentFilter\contentFilter.txt";
 
     //Ensures that an image is submitted to the post and that there are no file upload errors
     if(isset($_FILES["postimg"]) && $_FILES["postimg"]["error"] === UPLOAD_ERR_OK){
