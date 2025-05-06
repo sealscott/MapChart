@@ -84,7 +84,7 @@
                 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
                 //Runs an insert query, adding the caption, posterid and image url to a row in the posts table
-                $query = "INSERT INTO posts (caption, posterid, imgurl, lat, lon) VALUES ('$caption', '$userID','/PHP-Backend/$targetFile', '$lat', '$lon')";
+                $query = "INSERT INTO posts (caption, posterid, imgurl, lat, lon) VALUES ('$caption', '$userID','/src/PHP-Backend/$targetFile', '$lat', '$lon')";
                 $stmt = $db->query($query);
 
                 //Redirects to the feed page
