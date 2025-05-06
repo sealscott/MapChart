@@ -1,7 +1,7 @@
 <?php
     session_start(); 
 
-    require_once(dirname(__DIR__)."\\PHP-Backend\\functions.php");
+    require_once "../PHP-Backend/functions.php";
 
     function return_to_feed (){
         header("Location: /src/Pages/feed-page.php");

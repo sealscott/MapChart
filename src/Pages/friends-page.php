@@ -3,7 +3,7 @@
 
     $userID = $_SESSION['userID'];
 
-    require_once(dirname(__DIR__)."\\PHP-Backend\\functions.php");
+    require_once "../PHP-Backend/functions.php";
 
     try {
         //Creates a new PDO connection

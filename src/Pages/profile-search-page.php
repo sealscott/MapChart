@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(dirname(__DIR__) . "\\PHP-Backend\\functions.php");
+require_once "../PHP-Backend/functions.php";
 
 // Initialize $searchRes to an empty array to avoid undefined variable errors.
 $searchRes = array();

@@ -2,7 +2,7 @@
     session_start();
     ob_start();
 
-    require_once(dirname(__DIR__)."\\PHP-Backend\\functions.php");
+    require_once "../PHP-Backend/functions.php";
 
     //Creates the PDO connection
     try {

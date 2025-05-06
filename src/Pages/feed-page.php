@@ -2,7 +2,7 @@
     session_start();
     ob_start();
     $err = "";
-    require_once dirname(__DIR__)."\\PHP-Backend\\functions.php";
+    require_once "../PHP-Backend/functions.php";
 
     try {
         $db = getDatabaseConnection(); // Change to your database credentials
