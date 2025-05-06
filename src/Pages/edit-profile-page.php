@@ -42,7 +42,7 @@
     
     
     <div id="map-header">
-        <div id="app-title">WeatherMap Social</div>
+        <div id="app-title">MapChart</div>
         <input type="text" id="searchBox" placeholder="Find posts in any area">
         <button id="searchButton">Search</button>
     </div>
