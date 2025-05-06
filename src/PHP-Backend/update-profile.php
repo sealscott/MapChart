@@ -45,7 +45,7 @@
         $disName = $_POST['username'];
         
         if($_FILES["profpic"]['name'] != ""){
-            $query = "UPDATE users SET bio = '$bio', disName = '$disName', profpicurl = '/PHP-Backend/$targetFile' WHERE uid = $userID";
+            $query = "UPDATE users SET bio = '$bio', disName = '$disName', profpicurl = '/src/PHP-Backend/$targetFile' WHERE uid = $userID";
             $stmt = $db->query($query);
         } else {
         //Udates the user's bio and display name in the user table
