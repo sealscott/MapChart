@@ -1,5 +1,4 @@
-
-        // Global variables
+     // Global variables
         var map;
         var marker;
 
