@@ -25,7 +25,7 @@
     }
 
     // Load contentFilter
-    $filterFile = "\contentFilter\contentFilter.txt";
+    $filterFile = "/contentFilter/contentFilter.txt";
 
     //Ensures that an image is submitted to the post and that there are no file upload errors
     if(isset($_FILES["postimg"]) && $_FILES["postimg"]["error"] === UPLOAD_ERR_OK){
