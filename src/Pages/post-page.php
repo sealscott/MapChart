@@ -16,7 +16,6 @@
 <body>
     <!-- Left Sidebar with Navigation Buttons -->
     <div id="sidebar">
-    <button class="nav-button" id ="feedButton" onclick="location.href='/src/Pages/feed-page.php'"></button>
         <button class="nav-button" id ="feedButton" onclick="location.href='feed-page.php'"></button>
         <button class="nav-button" id="mapButton" onclick="location.href='map-page.php'"></button>
         <button class="nav-button" id ="profileButton" onclick="location.href='profile-page.php'"></button>
