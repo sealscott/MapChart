@@ -117,7 +117,7 @@ try {
     </div>
 
     <div id="map-header">
-        <div id="app-title">WeatherMap Social</div>
+        <div id="app-title">MapChart</div>
     </div>
 
     <div id="content-container">
