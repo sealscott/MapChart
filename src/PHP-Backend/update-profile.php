@@ -1,7 +1,7 @@
 <?php
     session_start();
     ob_start();
-    require_once(__DIR__."\\functions.php");
+    require_once("functions.php");
 
     if(isset($_FILES["profpic"]) && $_FILES["profpic"]["error"] === UPLOAD_ERR_OK){
 

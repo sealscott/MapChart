@@ -4,7 +4,7 @@
     $userID;
     $caption;
 
-    require_once(__DIR__."\\functions.php");
+    require_once("functions.php");
     
     $lat = null;
     $lon = null;
