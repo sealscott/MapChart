@@ -16,7 +16,7 @@ session_start();
 
 <body>
     <header>
-        <h1 class="WeatherMap-header">WeatherMap Social</h1>
+        <h1 class="WeatherMap-header">MapChart</h1>
         <h2>Register</h2>
     </header>
 
