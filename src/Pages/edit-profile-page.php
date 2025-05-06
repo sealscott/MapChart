@@ -42,7 +42,7 @@
     
     
     <div id="map-header">
-        <div id="app-title">MapChart</div>
+        <div id="app-title">MapChat</div>
         <input type="text" id="searchBox" placeholder="Find posts in any area">
         <button id="searchButton">Search</button>
     </div>

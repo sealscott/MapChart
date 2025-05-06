@@ -13,7 +13,7 @@ if (isset($_COOKIE['darkMode']) && $_COOKIE['darkMode'] === 'enabled') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body class="<?php echo $darkMode; ?>">
-    <title>MapChart</title>
+    <title>MapChat</title>
 
     <link id="mainStylesheet" rel="stylesheet" href="/src/CSS/main.css">
     <link id="mapStylesheet"rel="stylesheet" href="/src/CSS/map.css">
@@ -73,7 +73,7 @@ if (isset($_COOKIE['darkMode']) && $_COOKIE['darkMode'] === 'enabled') {
     <div id="map-container">
         <!-- Header inside map with title and search -->
         <div id="map-header">
-            <div id="app-title">MapChart</div>
+            <div id="app-title">MapChat</div>
             <input type="text" id="searchBox" placeholder="Find posts in any area">
             <button id="searchButton">Search</button>
         </div>

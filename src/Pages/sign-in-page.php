@@ -60,7 +60,7 @@
 
 <body>
     <header>
-        <h1 id= "title">MapChart</h1>
+        <h1 id= "title">MapChat</h1>
     </header>
 
     <section>
