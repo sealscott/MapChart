@@ -8,6 +8,7 @@ The application is simplistic, and is an easy way to share pictures with others.
 ## **Contributions**
 Outside API's used for assistance with this app:
 * [Leaflet API](https://leafletjs.com/reference.html)
+* [OpenStreetMap](https://osmfoundation.org/wiki/Main_Page)
 
 Beyond the above APIs, all code was written by WVU students taking CS330. Contributors are listed below:
 * [Jett Nicolette](https://github.com/jettnicolette)
