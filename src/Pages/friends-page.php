@@ -36,7 +36,7 @@
 
 <body>
     <!-- Left Sidebar with Navigation Buttons -->
-    < id="sidebar">
+    <div id="sidebar">
         <button class="nav-button" id ="feedButton" onclick="location.href='feed-page.php'"></button>
         <button class="nav-button" id="mapButton" onclick="location.href='map-page.php'"></button>
         <button class="nav-button" id ="profileButton" onclick="location.href='profile-page.php'"></button>
@@ -52,7 +52,7 @@
 
     <!--Need to add functionality for the search bar on this page.-->
     <div id="map-header">
-        <div id="app-title">WeatherMap Social</div>
+        <div id="app-title">MapChart</div>
         <input type="text" id="searchBox" placeholder="Find posts in any area">
         <button id="searchButton">Search</button>
     </div>
