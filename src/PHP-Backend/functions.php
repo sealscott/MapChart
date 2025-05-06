@@ -230,7 +230,7 @@
     
             // If SSL is required, add SSL options
             if ($config['DB_SSL'] === 'require') {
-                $options[PDO::MYSQL_ATTR_SSL_CA] = __DIR__ . '/config/DigiCertGlobalRootCA.crt.pem'; // Path to the SSL certificate
+                $options[PDO::MYSQL_ATTR_SSL_CA] = '/src/PHP_Backend/config/DigiCertGlobalRootCA.crt.pem'; // Path to the SSL certificate
             }
     
             // Create PDO instance
