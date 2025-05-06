@@ -87,8 +87,8 @@ if (isset($_COOKIE['darkMode']) && $_COOKIE['darkMode'] === 'enabled') {
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
     
-    <script src="/src/JS/map.js"></script>
-    <script src="/src/JS/darkMode.js"></script>
+    <script src="../JS/map.js"></script>
+    <script src="../JS/darkMode.js"></script>
 
     
 </body>
