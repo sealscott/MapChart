@@ -2,11 +2,8 @@
 .messages-container {
     position: fixed;
     top: 10vh; /* Start below header */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+    left: 10%; /* Center horizontally */
     width: 90%; /* Use most of the screen width */
-    max-width: 800px; /* Limit width for larger screens */
-    height: 75vh; /* Adjust height for better usability */
     overflow-y: auto; /* Enable scrolling for messages */
     padding: 15px;
     background-color: #f9f9f9; /* Light background for contrast */
@@ -52,8 +49,8 @@
 .send-message-container {
     position: fixed;
     bottom: 10px; /* Stick to the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+    left: 10%; /* Center horizontally */
+     /* Center horizontally */
     width: 90%; /* Use most of the screen width */
     max-width: 800px; /* Limit width for larger screens */
     display: flex;
@@ -65,8 +62,8 @@
 }
 
 /* Input field for typing messages */
-.send-message-container input {
-    flex: 1;
+.message-bar {
+    flex-grow: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -75,7 +72,8 @@
 }
 
 /* Send button */
-.send-message-container button {
+.message-button {
+    flex-grow: 1;
     background-color: #1296e4;
     color: white;
     padding: 10px 15px;
@@ -83,18 +81,20 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
 
-.send-message-container button:hover {
+.message-button:hover {
     background-color: #86d7ff;
 }
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
+
     .messages-container {
         position: fixed;
         top: 10vh; /* Start below header */
-        left: 60%;
+        left: 20%; /* Shift to the right of the sidebar */
         width: 75%; /* Use the remaining width */
         height: 70vh; /* Adjust height for smaller screens */
         border-radius: 8px; /* Keep consistent styling */
@@ -104,7 +104,7 @@
     .send-message-container {
         position: fixed;
         bottom: 10px; /* Stick to the bottom */
-        left: 60%;
+        left: 20%;
         width: 75%; /* Use the remaining width */
         border-radius: 8px; /* Keep consistent styling */
         padding: 10px;
