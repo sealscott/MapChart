@@ -151,6 +151,7 @@ body.dark-mode .post, body.dark-mode .post p {
 .profile-action-button:focus {
     outline: none;
 }
+
 @media (max-width: 600px) {
     .profile-container {
         padding: 10px; 
