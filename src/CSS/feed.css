@@ -165,9 +165,20 @@ body.dark-mode .post-username {
     }
 
     .post {
-        height: 70%;
+        height:90%;
         width: 80%;
         border: none; 
         margin-bottom: 10px; 
+    }
+
+    .post-image {
+  
+        width: 85%;
+        height: auto; 
+        object-fit: cover;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        
     }
 }
