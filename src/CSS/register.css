@@ -174,3 +174,78 @@ a{
     margin-bottom: 15px;
 }
 
+
+/* MOBILE RESPONSIVE ADJUSTMENTS */
+@media only screen and (max-width: 600px) {
+    /* Shrink the overall padding and stack things more naturally */
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+        margin: center;
+      
+    }
+  
+    /* Title: full‑width, smaller font, no weird negative margin */
+    .WeatherMap-header {
+      width: 90%;
+      font-size: 5ch;
+      height: auto;
+      margin: 10px 0;
+    }
+  
+    /* Section container: full width, less shadow, no vertical translate */
+    section {
+      width: 100%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transform: none;
+    }
+  
+    /* Form inputs/buttons: slightly smaller padding & font */
+    form input {
+      padding: 12px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    /* Topbar: shorter, centered content */
+    .topbar {
+      height: 8vh;
+      padding: 8px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .topbar-header {
+      font-size: 1rem;
+    }
+    .topbar-button {
+      width: 32px;
+      height: 32px;
+      font-size: 12px;
+    }
+  
+    /* Nav links: smaller margin */
+    a {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+  
+    /* Error boxes: full width */
+    .error {
+      max-width: 100%;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
+
