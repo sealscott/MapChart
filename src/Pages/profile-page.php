@@ -157,10 +157,9 @@
                     //Displays the user's information into the profile-header box
                     echo "<h1>$disName</h1>
                     <div class='stats'>
-                        <span><b>$numPosts</b> $postsTxt</span>
-                        <span><b>$numFriends</b> $friendsTxt</span>
+                        <div><b>$numPosts</b> $postsTxt</div> <!-- Posts on a separate line -->
+                        <div><b>$numFriends</b> $friendsTxt</div> <!-- Friends on a separate line -->
                     </div>
-                    
                     <p id='profileBio'>$bio</p>";
 
                     //Checks to see if the profile is yours, or another users

@@ -189,63 +189,64 @@ a{
         height: 100vh;
         padding: 20px;
         margin: center;
-      
     }
   
-    /* Title: full‑width, smaller font, no weird negative margin */
+    /* Title: full‑width, bigger bubble for the title */
     .WeatherMap-header {
-      width: 90%;
-      font-size: 5ch;
-      height: auto;
-      margin: 10px 0;
+        width: 100%; /* Full width on mobile */
+        font-size: 6ch; /* Slightly larger font size */
+        height: auto; /* Allow height to adjust automatically */
+        padding: 20px; /* Add padding to make the bubble larger */
+        margin: 20px 0; /* Add vertical spacing */
+        border-radius: 12ch; /* Increase border-radius for a larger bubble */
     }
   
     /* Section container: full width, less shadow, no vertical translate */
     section {
-      width: 100%;
-      margin: 10px 0;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transform: none;
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: none;
     }
   
     /* Form inputs/buttons: slightly smaller padding & font */
     form input {
-      padding: 12px;
-      font-size: 16px;
+        padding: 12px;
+        font-size: 16px;
     }
     button {
-      padding: 10px;
-      font-size: 14px;
+        padding: 10px;
+        font-size: 14px;
     }
   
     /* Topbar: shorter, centered content */
     .topbar {
-      height: 8vh;
-      padding: 8px;
-      flex-direction: column;
-      align-items: center;
+        height: 8vh;
+        padding: 8px;
+        flex-direction: column;
+        align-items: center;
     }
     .topbar-header {
-      font-size: 1rem;
+        font-size: 1rem;
     }
     .topbar-button {
-      width: 32px;
-      height: 32px;
-      font-size: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
     }
   
     /* Nav links: smaller margin */
     a {
-      margin-left: 10px;
-      font-size: 14px;
+        margin-left: 10px;
+        font-size: 14px;
     }
   
     /* Error boxes: full width */
     .error {
-      max-width: 100%;
-      padding: 8px 12px;
-      font-size: 14px;
+        max-width: 100%;
+        padding: 8px 12px;
+        font-size: 14px;
     }
-  }
+}
 
