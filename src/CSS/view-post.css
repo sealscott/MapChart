@@ -1,13 +1,55 @@
+.post-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Make sure the image covers the area */
+}
+
+.back-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px; /* Add a margin to the top */
+}
+
+#content-container {
+    /* width: 80%; 
+    margin: 20px auto 0 auto; 
+    */
+    display: flex; /* Enable flexbox */
+    flex-direction: column;
+    width: 95%;
+    height: 100vh; /* Full viewport height */
+}
+
+#feed {
+    width: 100%; /* Make the feed take the full width */
+}
+
+#back-to-feed-button {
+    margin-top: 20px; /* Ensure a 20px gap above the button */
+}
+
 @media (max-width: 600px) { 
 
     #content-container { 
         right: auto;   
-        width: 480px;  
-
+        width: 95%;  
+        margin: 20px auto 0 auto; /* Maintain the 20px margin on mobile */
     }
 
     #title {
         text-align: center;
+    }
+
+    #back-to-feed-button {
+        margin-top: 20px; /* Ensure a 20px gap above the button */
     }
 
 }

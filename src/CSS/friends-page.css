@@ -1,17 +1,17 @@
+/* Center the friends-container */
 .friends-container {
     position: fixed;
     top: 10vh; /* Start below header */
-    left: 10%; /* Match sidebar width */
-    width: 90%; /* Remaining space */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 90%; /* Use most of the screen width */
+    max-width: 800px; /* Limit width for larger screens */
     height: 90vh; /* Reduced height to account for header */
-    /* Important: This makes the container a positioning context for absolute elements */
-    position: relative;
     padding: 25px;
-    justify-content: center;
-}
-
-.friend-container{
-    
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable scrolling if needed */
 }
 
 #friendsButton {
@@ -20,32 +20,84 @@
     transition: transform 0.3s ease;
 }
 
+/* Dark mode adjustments */
 body.dark-mode .friends-container {
     background-color: #000622; /* Dark background */
     color: #acacac; /* Light text */
 }
 
-.friends-header{
+/* Friends header styling */
+.friends-header {
     font-size: 40px;
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px;
 }
 
-.friend-name{
-
+/* Friend container styling */
+.friend-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Add spacing between friends */
 }
 
-.view-prof{
-
+/* Friend name styling */
+.friend-name {
+    font-size: 20px;
+    margin-bottom: 10px; /* Add spacing below the name */
+    text-align: center;
 }
 
-.view-mess{
-
+/* Buttons for View Profile and View Messages */
+.view-prof,
+.view-mess {
+    display: inline-block;
+    background-color: rgb(18, 151, 228); /* Blue background */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px; /* Add spacing between buttons */
+    text-align: center;
+    text-decoration: none; /* Remove underline for links */
 }
 
-@media (max-width: 600px) { 
+.view-prof:hover,
+.view-mess:hover {
+    background-color: #86d7ff; /* Lighter blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
 
-    .friends-container { 
-        left: 20%;   
+.view-prof:focus,
+.view-mess:focus {
+    outline: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .friends-container {
+        left: 20%; /* Shift to the right of the sidebar */
+        width: 80%; /* Use the remaining width */
+        transform: translateX(0); /* Remove centering on mobile */
+        height: 80vh; /* Adjust height for smaller screens */
+        padding: 15px;
     }
 
+    .friends-header {
+        font-size: 30px; /* Adjust header size for mobile */
+    }
+
+    .friend-name {
+        font-size: 18px; /* Adjust name size for mobile */
+    }
+
+    .view-prof,
+    .view-mess {
+        font-size: 12px; /* Adjust button size for mobile */
+        padding: 8px 12px;
+    }
 }
 

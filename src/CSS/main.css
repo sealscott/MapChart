@@ -344,6 +344,9 @@ body.dark-mode #map {
     #profileSearchButton, #postButton, #settingsButton,
     #signOutButton, #darkModeButton, #friendsButton {
         zoom: 0;
+        width: 55px; /* Adjusted size for smaller screens */
+        height: 55px; /* Adjusted size for smaller screens */
+        margin: auto; /* Space between buttons */
     }
     
     #map-container {

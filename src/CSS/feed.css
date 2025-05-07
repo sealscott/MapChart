@@ -168,5 +168,6 @@ body.dark-mode .post-username {
         height: 70%;
         width: 80%;
         border: none; 
+        margin-bottom: 10px; 
     }
 }

@@ -71,35 +71,6 @@ try {
     <link rel="stylesheet" href="/src/CSS/feed.css">
     <link rel="stylesheet" href="/src/CSS/view-post.css">
     <link rel="icon" type="image/x-icon" href="/src/Icons/icon.png">
-    <style>
-        .post-image {
-            width: 100%;
-            height: auto;
-            object-fit: cover; /* Make sure the image covers the area */
-        }
-
-        .back-button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        #content-container {
-            width: 80%; /* Adjust as needed */
-            margin: 0 auto; /* Center the content */
-        }
-
-        #feed {
-            width: 100%; /* Make the feed take the full width */
-        }
-    </style>
 </head>
 
 <body>

@@ -20,10 +20,10 @@
 .save-changes-button-container {
     display: flex;
     justify-content: flex-end; /* Aligns the button to the right */
+    padding-right: 10px; /* Add some padding to the right for spacing */
 }
 
 .save-changes-button {
-    float: right;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,6 +35,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: fit-content; /* Ensure the button doesn't stretch */
 }
 
 .save-changes-button:hover {
@@ -76,4 +77,16 @@
 .form-row label {
     min-width: 80px;
     font-weight: bold;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .save-changes-button-container {
+        justify-content: flex-end; /* Keep the button aligned to the right on mobile */
+        padding-right: 10px; /* Maintain spacing on the right */
+    }
+
+    .save-changes-button {
+        margin: 0; /* Remove unnecessary margins */
+    }
 }
