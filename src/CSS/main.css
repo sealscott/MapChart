@@ -334,7 +334,7 @@ body.dark-mode #map {
 }
 
 /* For smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     #sidebar {
         width: 20%;
     }
@@ -349,6 +349,11 @@ body.dark-mode #map {
     }
     
     #weather-widget {
-        width: 30%;
+        visibility: hidden;
+    }
+
+    #searchButton, #searchBox {
+        width: 25%;
+        
     }
 }
