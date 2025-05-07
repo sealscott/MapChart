@@ -1,3 +1,9 @@
+body, html{
+
+    background-color: rgba(255, 255, 255, 0.769);
+
+}
+
 #profileSearchButton {
     background-color: rgb(18, 151, 228);
 }
@@ -31,7 +37,7 @@ body.dark-mode .profile-search-container {
     padding: 25px;
     border-radius: 5px;
     background-color: #f0f0f0; /* Light gray background */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgb(0, 0, 0); /* Subtle shadow */
     transition: box-shadow 0.3s ease; /* Smooth shadow transition */
     padding-bottom: 5%;
     align-items: center;
@@ -95,4 +101,36 @@ body.dark-mode .profile-search-container {
 .emptyResult {
     padding-top: 20px;
     padding-left: 5px; 
+}
+
+@media (max-width: 600px) { 
+
+    .profile-search-container {
+        top:5%;
+        width: 100%; /* Full width on small screens */
+        left: 10%; /* Align to the left */
+        height: 100vh; /* Full height on small screens */
+        
+    }
+
+
+
+
+    .profile-search-header {
+        font-size: 24px; /* Smaller font size on small screens */
+        background-color: #000622;
+    }
+
+    .profile-search-bar {
+        width: 100%; /* Wider search bar on small screens */
+    }
+
+    #profileSearchResultButton {
+        width: 100%; /* Wider button on small screens */
+    }
+    .emptyResult {
+        padding: 10px;
+        color: white;
+    }
+
 }

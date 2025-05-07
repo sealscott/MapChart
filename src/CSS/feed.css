@@ -151,3 +151,21 @@ body.dark-mode .post-username {
     cursor: pointer;
     border-radius: 5px;
 }
+
+@media (max-width: 600px) {
+    #map-container {
+        display: none; /* Reduced height on small screens */
+    }
+
+    /* 2) reset all offsets on the feed and let it fill the space */
+    #feed {
+        left: 20%;    /* cancel the 10% shift */
+        right: auto;   /* cancel the 0% constraint */
+        width: 480px;   /* fill the full width now that map is gone */
+    }
+
+    .post {
+        height: 70%;
+        width: 80%;
+    }
+}

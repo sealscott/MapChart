@@ -1,0 +1,13 @@
+@media (max-width: 600px) { 
+
+    #content-container { 
+        right: auto;   
+        width: 480px;  
+
+    }
+
+    #title {
+        text-align: center;
+    }
+
+}

@@ -69,6 +69,7 @@ try {
     <title>View Post</title>
     <link rel="stylesheet" href="/src/CSS/main.css">
     <link rel="stylesheet" href="/src/CSS/feed.css">
+    <link rel="stylesheet" href="/src/CSS/view-post.css">
     <link rel="icon" type="image/x-icon" href="/src/Icons/icon.png">
     <style>
         .post-image {

@@ -41,3 +41,11 @@ body.dark-mode .friends-container {
 
 }
 
+@media (max-width: 600px) { 
+
+    .friends-container { 
+        left: 20%;   
+    }
+
+}
+
