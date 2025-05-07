@@ -94,19 +94,19 @@
     .messages-container {
         position: fixed;
         top: 10vh; /* Start below header */
-        left: 15%; /* Shift to the right of the sidebar */
-        width: 85%; /* Use the remaining width */
+        left: 60%;
+        width: 75%; /* Use the remaining width */
         height: 70vh; /* Adjust height for smaller screens */
-        border-radius: 0; /* Remove border radius */
+        border-radius: 8px; /* Keep consistent styling */
         padding: 10px;
     }
 
     .send-message-container {
         position: fixed;
         bottom: 10px; /* Stick to the bottom */
-        left: 15%; /* Shift to the right of the sidebar */
-        width: 85%; /* Use the remaining width */
-        border-radius: 0; /* Remove border radius */
+        left: 60%;
+        width: 75%; /* Use the remaining width */
+        border-radius: 8px; /* Keep consistent styling */
         padding: 10px;
     }
 }
