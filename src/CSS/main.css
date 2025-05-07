@@ -337,6 +337,13 @@ body.dark-mode #map {
 @media (max-width: 600px) {
     #sidebar {
         width: 20%;
+        border-width: 5px; /* Adjust border width for smaller screens */
+    }
+
+    #feedButton, #mapButton, #profileButton,
+    #profileSearchButton, #postButton, #settingsButton,
+    #signOutButton, #darkModeButton, #friendsButton {
+        zoom: 0;
     }
     
     #map-container {

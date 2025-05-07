@@ -162,8 +162,6 @@ body.dark-mode .post, body.dark-mode .post p {
     }
 
     #profilePicture {
-        left: 1%;
-        top: 1%;
         width: 75px; /* Smaller profile picture */
         height: 75px; /* Smaller profile picture */
     }
@@ -171,6 +169,15 @@ body.dark-mode .post, body.dark-mode .post p {
     .profile-header {
         border-radius: 0px;
         width: auto;
+    }
+
+    .posts-area {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* One column */
+        max-height: 100vh; /* Full height on small screens */
+    }
+
+    .profile-action-button {
+        float: left;
     }
 
    
