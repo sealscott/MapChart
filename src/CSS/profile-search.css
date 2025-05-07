@@ -113,12 +113,14 @@ body.dark-mode .profile-search-container {
         
     }
 
-
-
+    body.dark-mode .profile-search-header {
+        background-color: #000622; /* Dark background */
+    }
 
     .profile-search-header {
         font-size: 24px; /* Smaller font size on small screens */
-        background-color: #000622;
+        background-color: #f0f0f0;
+        padding:
     }
 
     .profile-search-bar {
@@ -128,7 +130,7 @@ body.dark-mode .profile-search-container {
     #profileSearchResultButton {
         width: 100%; /* Wider button on small screens */
     }
-    .emptyResult {
+    body.dark-mode .emptyResult {
         padding: 10px;
         color: white;
     }
