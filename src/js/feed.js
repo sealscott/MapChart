@@ -79,11 +79,13 @@
             var cpClone = currentPost.cloneNode(true);
             var cpImage = cpClone.querySelector(".post-image");
             var cpTxt = cpClone.querySelector("." + feed.postLocation.postID + "-caption");
+            var viewPostBttn = cpClone.querySelector(".view-post-form");
 
             //create thumbnail (new div) for the post to appear on map
             var postThumbnail = document.createElement("div");
             postThumbnail.appendChild(cpImage);
             postThumbnail.appendChild(cpTxt);
+            postThumbnail.appendChild(viewPostBttn);
 
             //create popup for the post
             currentMarker.bindPopup(postThumbnail).openPopup();
