@@ -1,62 +1,93 @@
 <?php
     session_start();
     ob_start();
-    require_once("functions.php");
+    require_once "../PHP-Backend/functions.php";
 
-    if(isset($_FILES["profpic"]) && $_FILES["profpic"]["error"] === UPLOAD_ERR_OK){
+    $err = ""; // Initialize a variable to store error messages
 
-        /*Sets the target directory, determines the file type, sets the img name to the current time and concatinates it with a . and the file type,
-        then sets the target file to the combination of the target directory and image name.*/
+    if (isset($_FILES["profpic"]) && $_FILES["profpic"]["error"] === UPLOAD_ERR_OK) {
+
         $targetDir = "Profile-Pics/";
         $imageFileType = strtolower(pathinfo($_FILES["profpic"]["name"], PATHINFO_EXTENSION));
-        $imgName = time() . "." . $imageFileType;
-        $targetFile = $targetDir . $imgName;
+        $allowedTypes = ["jpeg", "png", "jpg", "gif"];
+        $maxFileSize = 2 * 1024 * 1024; // 2 MB
 
-        if(!file_exists($targetDir)){
-            mkdir($targetDir, 0777);
+        // Validate file type
+        if (!in_array($imageFileType, $allowedTypes)) {
+            $err = "Error: Only JPG, JPEG, PNG, and GIF files are allowed.";
         }
 
-        //Gets the temp folder directory, gets the tmp file name, and combines them with a directory separator and sets it to the tempPath
-        $tmpDir = sys_get_temp_dir();
-        $tmpName = basename($_FILES['profpic']['tmp_name']);
-        $tempPath = $tmpDir . DIRECTORY_SEPARATOR . $tmpName;
-        
-        //Ensures that the file type is an approved type: PNG, JPEG, JGP, GIF
-        if ($imageFileType != "jpeg" && $imageFileType != "png" && $imageFileType != "jpg" && $imageFileType !="gif"){
-            $err = "Image must be a JPG, JPEG, PNG, or GIF.";
+        // Validate file size
+        if ($_FILES["profpic"]["size"] > $maxFileSize) {
+            $err = "Error: File size exceeds the 2MB limit.";
         }
-        
-        //Moves the file from the temp directory, renames it, and places it in the target directory. If the file cannot be moved, it prints an error screen
-        if (!move_uploaded_file($tempPath, $targetFile)){
-            echo "File could not be uploaded";
-            exit();
+
+        if (empty($err)) {
+            // Generate unique file name
+            $imgName = time() . "_" . uniqid() . "." . $imageFileType;
+            $targetFile = $targetDir . $imgName;
+
+            // Create target directory if it doesn't exist
+            if (!file_exists($targetDir)) {
+                if (!mkdir($targetDir, 0777, true)) {
+                    $err = "Error: Failed to create directory.";
+                }
+            }
+
+            // Move uploaded file to target directory
+            if (!move_uploaded_file($_FILES["profpic"]["tmp_name"], $targetFile)) {
+                $err = "Error: Failed to upload file.";
+            }
         }
+    } elseif (isset($_FILES["profpic"]) && $_FILES["profpic"]["error"] !== UPLOAD_ERR_NO_FILE) {
+        // Handle other file upload errors
+        $err = "Error: File upload failed with error code " . $_FILES["profpic"]["error"] . ".";
     }
 
-    try{
-        //Creates a new PDO connection and sets attributes
-        $db = getDatabaseConnection();
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-        //Gets information from the session and form to send to the 
-        $userID = $_SESSION['userID'];
-        $bio = $_POST['bio'];
-        $disName = $_POST['username'];
-        
-        if($_FILES["profpic"]['name'] != ""){
-            $query = "UPDATE users SET bio = '$bio', disName = '$disName', profpicurl = '/src/PHP-Backend/$targetFile' WHERE uid = $userID";
-            $stmt = $db->query($query);
-        } else {
-        //Udates the user's bio and display name in the user table
-            $query = "UPDATE users SET bio = '$bio', disName = '$disName' WHERE uid = $userID";
-            $stmt = $db->query($query);
-        }
-
-    } catch (PDOException $e) {
-        echo  "Connection failed: " . $e->getMessage();
+    if (!empty($err)) {
+        // Echo the error, display a message, and exit
+        echo "<p class='error'>$err</p>";
+        echo "<p>Please go back and try again.</p>";
         exit();
     }
 
-    header('Location: /src/Pages/profile-page.php'); // Redirect to the profile page after updating
+    try {
+        // Create a new PDO connection and set attributes
+        $db = getDatabaseConnection();
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        // Get sanitized user inputs
+        $userID = $_SESSION['userID'];
+        $bio = htmlspecialchars($_POST['bio'], ENT_QUOTES, 'UTF-8');
+        $disName = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
+
+        // Update user information
+        if (isset($targetFile)) {
+            $query = "UPDATE users SET bio = :bio, disName = :disName, profpicurl = :profpicurl WHERE uid = :userID";
+            $stmt = $db->prepare($query);
+            $stmt->execute([
+                ':bio' => $bio,
+                ':disName' => $disName,
+                ':profpicurl' => "/src/PHP-Backend/$targetFile",
+                ':userID' => $userID
+            ]);
+        } else {
+            $query = "UPDATE users SET bio = :bio, disName = :disName WHERE uid = :userID";
+            $stmt = $db->prepare($query);
+            $stmt->execute([
+                ':bio' => $bio,
+                ':disName' => $disName,
+                ':userID' => $userID
+            ]);
+        }
+
+    } catch (PDOException $e) {
+        echo "<p class='error'>Error: " . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . "</p>";
+        exit();
+    }
+
+    // Redirect to the profile page after updating
+    header('Location: /src/Pages/profile-page.php');
+    exit();
 ?>
