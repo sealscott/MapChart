@@ -1,5 +1,5 @@
-# **MapChart**
-MapChart is a social media network that utilizes a map to view posts and weather information.
+# **MapChat**
+MapChat is a social media network that utilizes a map to view posts and weather information.
 
 ## **Purpose**
 This application is aimed to act as an alternative to other social medias. It also serves as a weather application that shows current weather information for any location, and defaults to either the user's current location or will default in Morgantown, WV. 
