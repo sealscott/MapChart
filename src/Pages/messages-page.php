@@ -100,7 +100,7 @@
             <?php
                 echo "<h3 class='messages-header'>$friendName</h3>";
                 foreach($messages as $message){
-                    $messageContents = $message['message'];
+                    $messageContents = htmlspecialchars($message['message']);
                     if($message['sid'] == $_SESSION['userID']){
                         echo "<div class='message-sent'>";
                         echo "<p class='message-contents'>$messageContents</p>";
